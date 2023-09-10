@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Montaga&family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Numans&family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Righteous&display=swap" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Smart-Watch-eCommerce-Website</title>
+</head>
+<body>
+    
+    <header class="header mb-5">
+        <div class="container">
+            <div class="row ">
+                <div></div>
+                <nav class="navbar navbar-expand-lg bg-light mt-3">
+                    
+                <div class="container-fluid ">
+                    
+                    <div class="header-logo d-flex d-lg-none ">
+                        <img src="img/nav/Apple Watch.png" alt="">
+                        <h2 class="headrer-logo__h2">Mohid</h2>
+                        
+                        
+                    </div>
+                    <div class="search mobile d-flex d-lg-none ">
+                        
+                        <div class="search-icon me-3">
+                            <img src="img/nav/Search.png" alt="">
+                            
+                        </div>
+                        <div class="acaunt me-3">
+                            <img src="img/nav/Person.png" alt="">
+                            
+                        </div>
+                        <div class="items position-relative">
+                            
+                            
+                            <img src="img/nav/Shopping Cart.png" alt="">
+                            <div class="items-number d-flex justify-content-center flex-column align-items-center" id="id1"></div>
+                        </div>
+                        
+                        
+                    </div>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse d-lg-flex justify-content-between" id="navbarSupportedContent">
+                        <div class="header-logo d-lg-flex d-none">
+                            <img src="img/nav/Apple Watch.png" alt="">
+                            <h2 class="headrer-logo__h2">Mohid</h2>
+                           
+                        </div>
+                    <ul class="navbar-nav  mb-2 mb-lg-0">
+                        
+                        <li class="nav-item">
+                        <a class="nav-link" href="#">home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Brands
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                        </li>
+                        <li class="nav-item">
+                            
+                            <a class="nav-link" href="#">Recent Products</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About</a>
+                            
+                        </li>
+                    </ul>
+                    
+                    <div class="search mobile d-none d-lg-flex ">
+                        
+                        <div class="search-icon me-3">
+                            <img src="img/nav/Search.png" alt="">
+                        </div>
+                        <div class="acaunt me-3">
+                            <img src="img/nav/Person.png" alt="">
+                        </div>
+                        <div class="items position-relative ">
+                           
+                            <div data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+                                <div class="cont"><img src="img/nav/Shopping Cart.png" alt="">
+                                    <div class="items-number d-flex justify-content-center flex-column align-items-center" id="id2">
+                                    </div>
+                                </div> 
+                            </div> 
+
+                            <div class="offcanvas2 offcanvas-start div2 div3 div4" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                              <div class="offcanvas-header">
+                                <h5 class="offcanvas-title text-white text-center" id="offcanvasScrollingLabel">საყიდლების კალათა</h5>
+                                <button type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling" aria-label="Close"></button>
+                              </div>
+                              <div class="offcanvas-body bg-white">
+                                <div class="class-container">
+                                    <div class="cart-img w-100 d-flex justify-content-center flex-column">
+                                        <img src="img/cart/Heading.svg" alt="">
+                                        
+                                    </div>
+                                    <div class="cart__itemsCount">
+                                        <p class="cart__itemsCount__title">თქვენ გაქვთ  პროდუქტი ნაყიდი</p>
+                                    </div>
+                                    
+                                    
+                                    <div class="cart__allSum d-flex   justify-content-between">
+                                        <div class="all__sum  ">250</div>
+                                        <div class="cart-it d-flex">
+                                            <div class="cart_h2">Checkout</div>
+                                            <div class="cart_h2__img"><img src="img/cart/go back.svg" alt=""></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                    
+                               </div>
+                                
+                              </div>
+                            </div>
+                            
+                            
+                        </div>
+                        
+                        
+                    </div>
+                    </div>
+                    
+                
+                </nav>
+            </div>
+            <div class="row mt-5 d-flex flex-row align-items-center">
+                
+                <div class="col-lg-6 col-12 ">
+                    <div class="suitable__item">
+                        
+                        <div class="suitable__title mb-2">Discover <br> Most Suitable Watches</div>
+                        
+                        <div class="suitable__text">Find the best, reliable, and cheap smart watches here. <br>
+                             We focus on product quality. Here you can find smart <br> watches of almost all brands. So why you are waiting? <br>
+                              Just order now!</div>
+                        <div class="search">
+                            <form class="d-flex mt-3 position-relative form-header" role="search">
+                                <input class="form-control me-2 " type="search" placeholder="Search" aria-label="Search">
+                                <button class="btn btn-secondary search-btn " type="submit">Search</button>
+                              </form>
+                        </div>      
+                    </div>
+                    
+                </div>
+                <div class="col-lg-6 col-12 d-control"> <div class="suitable__item   justify-content-center d-flex">
+                    <img class="imgs" src="img/nav/17b2724d5bd682148b44a88441cad7bfa9fe6730_original-removebg-preview 1.png" alt="">
+                </div></div>
+            </div>
+        </div>
+    </header>
+    <section class="section-one mb-5 ">
+        <div class="container">
+            <div class="row mt-5">
+                <div class="col-lg-4 col-md-4 col-12 ">
+                    <div class="section-one__items d-flex justify-content-center flex-row align-items-center">
+                        <div class="items__watch__img me-4">
+                            <img src="img/watches/apple-watch-series7-black-myshop-pk-1-removebg-preview 1.png" alt="">
+                        </div>
+                        <div class="items__watch__content">
+                            <div class="items__watch__content__h2 mb-1">
+                                Apple
+                            </div>
+                            <div class="items__watch__content__text">
+                                Apple is one of the <br> most famous smart <br> watches providing company.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-12">
+                    <div class="section-one__items d-flex justify-content-center flex-row align-items-center">
+                        <div class="items__watch__img me-4">
+                            <img src="img/watches/xiaomi_redmi_watch_2_lite_azul_01_l-removebg-preview 1.png" alt="">
+                        </div>
+                        <div class="items__watch__content">
+                            <div class="items__watch__content__h2 mb-1">
+                                Xiaomi
+                            </div>
+                            <div class="items__watch__content__text">
+                                Xiaomi smart watches <br> are produced by MI company.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-12">
+                    <div class="section-one__items d-flex justify-content-center flex-row align-items-center">
+                        <div class="items__watch__img me-4">
+                            <img src="img/watches/6426000_sd-removebg-preview 1.png" alt="">
+                        </div>
+                        <div class="items__watch__content">
+                            <div class="items__watch__content__h2 mb-1">
+                                FitBit
+                            </div>
+                            <div class="items__watch__content__text">
+                                FitBit smart watches <br> are best for there <br> health and fitness features.
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="latest-products">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="latest-products__title">
+                    <h3 class="latest-products__h3">Find your favourite smart watch.</h3>
+                    <h3 class="latest-products__h2 mb-5">Our Latest Products</h3>
+                </div>
+                
+            </div>
+            <div class="row justify-content-center ross">
+                
+                <!--<div class="col-lg-4 col-md-6 col-12">
+                    <div class="latest-products_content ">
+                        <div class="latest-products_content__bg position-relative">
+                            <div class="list">
+                                <div class="list__cart mb-3">
+                                    <div class="list__cart__bg">
+                                        <img src="img/products/shopping-cart.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="list__cart mb-2">
+                                    <div class="list__cart__bg2">
+                                        <img src="img/products/Frame 4.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="latest-products_content__img ">
+                                <img src="img/products/6.png" alt="">
+                            </div>
+                        </div>
+                        <h2 class="latest-products_content__title mt-1">Fitbit Max 1</h2>
+                        <div class="latest-products_content__rating">
+                            <img src="img/products/Frame 5.svg" alt="">
+                        </div>
+                        <div class="latest-products_content__cost mt-3">$155.00
+                        </div>
+                        
+                    </div>
+                </div>-->
+
+                <button type="button" class="btn-primary btn">View More</button>
+            </div>
+            
+        </div>
+
+    </section>
+    <section class="about-us">
+        <div class="container">
+            <div class="row mt-3 mb-5">
+                <div class="latest-products__title">
+                    <h3 class="latest-products__h3">Here are our some of the best clients.</h3>
+                    <h3 class="latest-products__h2 mb-5">What People Say About Us</h3>
+                </div>
+                <div class="row mt-5">
+                    <div class="about-us__slide d-flex justify-content-between flex-wrap ">
+                        <div class="about-us__items d-flex mb-5 colubm">
+                            <div class="about-us__left">
+                                <img src="img/rating/6426000_sd-removebg-preview 1.png" alt="">
+                            </div>
+                            <div class="about-us__right d-flex flex-column  justify-content-center">
+                                <h2 class="about-us__right__title">Hamza Faizi</h2>
+                                <h2 class="about-us__right__text show">Don’t waste time, just order! This <br>
+                                     is the best website to puschase <br> smart watches.</h2>
+                                <h2 class="about-us__right__text hide">Don’t waste time, just order! This 
+                                        is the best website to puschase  smart watches.</h2>
+                                <h2 class="about-us__right__rating"><img src="img/products/Frame 5.svg" alt=""></h2>
+                            </div>
+                        </div>
+                         <div class="about-us__items d-flex me-5 colubm">
+                            <div class="about-us__left">
+                                <img src="img/rating/6426000_sd-removebg-preview 1 (1).png" alt="">
+                            </div>
+                            <div class="about-us__right d-flex flex-column  justify-content-center">
+                                <h2 class="about-us__right__title">Hafiz Huzaifa</h2>
+                                <h2 class="about-us__right__text show">I’ve been purchasing smart <br>
+                                     watches of Mohid for a long time.  <br>
+                                     All the products are good quality.</h2>
+                                <h2 class="about-us__right__text hide">I’ve been purchasing smart 
+                                        watches of Mohid for a long time.  
+                                        All the products are good quality.</h2>
+                                <h2 class="about-us__right__rating"><img src="img/products/Frame 5.svg" alt=""></h2>
+                            </div>
+                        </div>
+                    </div>
+                    
+               
+                </div>
+                <div class="about-us__btn d-flex justify-content-center mt-5">
+                    <img src="img/rating/Dots.svg" alt="">
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="row position-relative">
+                
+                <div class=" background d-flex ">
+                    <div class="background2 d-flex">
+                    <div class="col-lg-6 col-12 d-flex  flex-column  align-item-center justify-content-center ">
+                        <h2 class="background-title">
+                            Subscribe To Newsletter
+                        </h2>
+                        <p class="background-text">Get free guide about smart watches daily. </p>
+                        <form class="d-flex mt-3 position-relative form-header form-header2" role="search">
+                            <input class="form-control me-2 " type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-secondary search-btn " type="submit">Subscribe</button>
+                          </form>
+                    </div>
+                    
+                </div></div>
+            </div>
+            </div>
+        <div class="footer-div d-flex justify-content-center flex-column align-items-center">
+            <h2 class="footer-div__title">Copyright @ 2022 | Mohid</h2>
+        </div>
+    </footer>
+
+
+
+    <script src="js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>    
+</body>
+</html>
